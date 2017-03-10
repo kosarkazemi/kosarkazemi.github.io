@@ -1,0 +1,64 @@
+//*********   imports    *********
+@mixin vendor-prefixes($property, $value)
+  -webkit-#{$property}: $value
+  -moz-#{$property}: $value
+  -ms-#{$property}: $value
+  -o-#{$property}: $value
+
+
+//*********   page elements    *********
+
+#blog
+  @include vendor-prefixes(column-width , 20em) //IE
+  width: 100%
+  max-width: 90%
+  margin: 5% 0 0 5%
+  margin-top: 10%
+
+
+.blog-card
+  transition: opacity .4s ease-in-out //IE
+  display: inline-block
+  width: 100%
+  @include vendor-prefixes(column-break-inside , avoid)
+  @include vendor-prefixes(break-inside , avoid) //IE
+
+
+.cd-icon
+  float: left
+  border: 0.5em solid $TheBlue //IE
+  background-image: url("../imagesfiles/profile-picture2.jpg")
+  background-size: 100% 100%
+  width: 5em
+  height: 5em
+  border-radius: 50%
+  margin-left: 0.5em
+
+.cd-author
+  margin-top: 10%
+  margin-left: 30%
+
+.cd-author p
+  color: $TheBlue
+  text-align: left
+  font-size: 1.5em
+
+
+.blog-date
+  width: 40%
+  margin-left: 30%
+
+.cd-more
+  margin-left: 75%
+  margin-bottom: 1em
+  color: #2f98d6
+
+
+
+
+
+
+
+//*********   card styling override    *********
+
+//.blog-card .cd-content

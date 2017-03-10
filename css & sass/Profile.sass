@@ -1,0 +1,184 @@
+//*********   imports    *********
+
+$card-title-color: #4682B4
+$TheOrangeRed: #FF4500
+$TheBlue: #154879
+$TheWhite: #ccc
+
+@mixin vendor-prefixes($property, $value)
+  -webkit-#{$property}: $value
+  -moz-#{$property}: $value
+  -ms-#{$property}: $value
+  -o-#{$property}: $value
+
+
+//*********   page elements    *********
+
+
+.header
+  z-index: 2
+  position: fixed
+  background-image: url("../imagesfiles/Header.png")
+  @include vendor-prefixes(background-size , cover)
+  width: 100%
+  height: 25%
+  border-bottom: 0.5em solid $TheBlue
+
+#profile-content
+  background-color: gainsboro
+  margin-left: 5%
+  margin-top: 9%
+  min-width: 90%
+  min-height: 100%
+  float: left
+
+
+#information-box
+  border: 2px ridge red
+  border-radius: 0.5em
+  float: right
+  margin-left: 40%
+  margin-top: 10%
+  margin-bottom: 5%
+  margin-right: 10%
+  width: 60%
+  height: 85%
+  min-height: 30em
+  padding-top: 1em
+
+#profile-picture
+  position: absolute
+  z-index: 3
+  height: 15em
+  width: 15em
+  background-image: url("../imagesfiles/profile-picture2.jpg")
+  background-size: cover
+  margin-top: 8%
+  margin-left: 8%
+  border: 0.5em solid $TheOrangeRed
+  border-radius: 50%
+
+
+
+
+//*********   inside the information box    *********
+
+
+.line-separator
+  height: 2px
+  width: 50%
+  margin-right: 5%
+  margin-left: 25%
+  background: $TheBlue
+  border-bottom: 1px solid #313030
+  margin-top: 1em
+  margin-bottom: 0.5em
+
+
+.information
+  padding-left: 1em
+  padding-right: 0.5em
+  padding-top: 0.5em
+  padding-bottom: 3em
+  margin-right: 3em
+  margin-left: 3em
+  margin-bottom: 0.5em
+  border: 0.1em solid grey
+  border-radius: 0.5em
+
+#description h2
+  color: $TheBlue
+
+
+#description h3
+  margin-bottom: 0.5em
+  text-align: left
+  color: $TheBlue
+  font-size: 1.5em
+
+#description p
+  text-align: left
+
+#CV h2
+  color: $TheBlue
+
+#CV h3
+  margin-bottom: 0.5em
+  text-align: left
+  color: $TheBlue
+  margin-top: 1em
+
+#CV ol li
+  margin-top: 0.2em
+  text-align: left
+  list-style-position: inside
+  list-style-type: square
+
+#CV-link
+  position: relative
+  float: left
+  color: $TheBlue
+  margin-top: 1em
+
+
+
+//*********   Social elements    *********
+
+#contact
+  position: absolute
+  border: 0.2em solid dimgray
+  border-radius: 0.5em
+  float: left
+  width: 25%
+  Top: 40%
+  left: 1em
+
+#social p
+  padding-top: 0.3em
+
+
+#social
+  position: absolute
+  float: left
+  margin-left: 10%
+  height: 5em
+  width: auto
+  Top: 50%
+  left: 1em
+
+
+.social-link img
+  width: 4em
+  height: 4em
+
+
+
+//*********   gallery elements    *********
+
+.gallery
+  margin-left: 10%
+  top: 200%
+
+
+.img-gallary
+  top: 10%
+  padding: 0 6px
+  width: 20%
+  bottom: 10%
+  float: left
+
+.img-gallary img
+  width: 100%
+  height: 100%
+
+.img-gallary:hover
+  width: 40%
+  height: auto
+
+
+
+
+
+
+
+
